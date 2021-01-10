@@ -31,11 +31,26 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    def retrofit_version = "2.9.0"
+    def lifecycle_version = "2.2.0"
 
+    //Constraint Layout
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    //Material Design
+    implementation 'com.google.android.material:material:1.2.1'
+
+    //Swipe Refresh Layout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //Lifecycle(LiveData and ViewModel)
+    implementation  "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
 }
