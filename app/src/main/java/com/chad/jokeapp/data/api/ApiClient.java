@@ -5,9 +5,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    private static Retrofit retrofit;
+    public Retrofit retrofit;
 
-    public static Retrofit getRetrofit() {
+    public Retrofit getRetrofit() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl("https://icanhazdadjoke.com/")
