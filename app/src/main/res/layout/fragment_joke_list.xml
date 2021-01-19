@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragment.JokeListFragment">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewHome"
@@ -20,5 +22,31 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ImageView
+        android:id="@+id/imageNoInternetList"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/no_internet" />
+
+    <TextView
+        android:id="@+id/textNoInternetList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:includeFontPadding="false"
+        android:text="@string/no_internet"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>
